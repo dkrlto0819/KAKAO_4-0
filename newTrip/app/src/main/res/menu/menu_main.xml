@@ -3,25 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.ddang.newtrip.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/menu_home"
         android:orderInCategory="100"
         android:title="HOME"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/menu_login"
+        android:id="@+id/menu_writing"
         android:orderInCategory="100"
         android:title="일정 작성하기"
         />
 
     <item
-        android:id="@+id/menu_logout"
+        android:id="@+id/menu_list"
         android:orderInCategory="100"
         android:title="내 일정목록 보기"
         />
 
     <item
-        android:id="@+id/menu_a"
+        android:id="@+id/menu_logout"
         android:orderInCategory="100"
         android:title="로그아웃"
         />

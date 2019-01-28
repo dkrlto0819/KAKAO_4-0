@@ -18,11 +18,8 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction fragmentTransaction;
     Fragment_Home fragment_home;
     Fragment_Write fragment_write;
-<<<<<<< HEAD
     Fragment_List fragment_list;
-=======
-    PlanListFragment planListFragment;
->>>>>>> a4208695a3e37a4742d5067e84bb26c2dec73302
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,13 +87,9 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
             case 2:
-<<<<<<< HEAD
                 fragment_list=new Fragment_List();
                 fragmentTransaction.replace(R.id.main_frame, fragment_list);
-=======
-                planListFragment=new PlanListFragment();
-                fragmentTransaction.replace(R.id.main_frame, planListFragment);
->>>>>>> a4208695a3e37a4742d5067e84bb26c2dec73302
+
                 fragmentTransaction.commit();
                 break;
             case 3:

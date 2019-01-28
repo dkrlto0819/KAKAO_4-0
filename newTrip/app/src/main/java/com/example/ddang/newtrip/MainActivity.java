@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentTransaction fragmentTransaction;
     Fragment_Home fragment_home;
     Fragment_Write fragment_write;
+    Fragment_List fragment_list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -84,8 +85,8 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
             case 2:
-                fragment_home=new Fragment_Home();
-                fragmentTransaction.replace(R.id.main_frame, fragment_home);
+                fragment_list=new Fragment_List();
+                fragmentTransaction.replace(R.id.main_frame, fragment_list);
                 fragmentTransaction.commit();
                 break;
             case 3:

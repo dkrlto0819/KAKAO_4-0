@@ -17,6 +17,9 @@ import java.util.ArrayList;
 
 public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
 
+    public JSONArray json_title;
+    public String string;
+
     @Override
     protected ArrayList<String> doInBackground(Void... voids) {
         ArrayList<String> message = null;
@@ -44,7 +47,7 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
     }
     public JSONArray call_popular() throws IOException {
         JSONArray jsonPop = null;
-        URL url = new URL("http://myks790.iptime.org:8888/api/plan/list?classification=popularity&size=25&sort=id%2Cdesc");
+        URL url = new URL("http://myks790.iptime.org:8888/api/plan/1");
 
         try {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -60,13 +63,19 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
 
 
             System.out.println(stringBuffer);
-            String string = stringBuffer.toString();
+            string = stringBuffer.toString();
             inputStream.close();
             conn.disconnect();
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(string);
-            jsonPop = (JSONArray) jsonObject.get("content");
+            jsonPop = (JSONArray) jsonObject.get("routes");
 
+//            for(int i=0; i<jsonPop.size(); i++){
+//                JSONObject objectInArray = (JSONObject) jsonPop.get(i);
+////                json_title=(JSONArray) objectInArray.get("title");
+//            }
+
+            //json_title = (JSONArray) jsonObject.get("title");
 
         } catch (Exception e) {
             jsonPop = new JSONArray();
@@ -75,12 +84,13 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
 
         return jsonPop;
     }
+
     public ArrayList<String> get_route() throws IOException {
         ArrayList<String> route = new ArrayList<>();
 
         JSONArray jsonArray = call_popular();
         for(Object item : jsonArray) {
-            route.add(((JSONObject) item).get("routes").toString());
+            route.add(((JSONObject) item).toString());
         }
         System.out.println(jsonArray.toString());
         return route;

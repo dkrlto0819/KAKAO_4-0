@@ -18,7 +18,7 @@
         android:id="@+id/Title"
         android:layout_width="378dp"
         android:layout_height="46dp"
-        android:text="<제목>"
+        android:text="제목"
         android:textSize="30dp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="29dp" />

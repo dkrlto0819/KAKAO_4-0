@@ -9,7 +9,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
 import android.widget.TextView;
 
 import org.json.JSONArray;
@@ -18,26 +17,20 @@ import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.w3c.dom.Text;
-=======
 import android.widget.Button;
->>>>>>> 14905600bf21149113961a305a101d7bbb905a8e
-
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Fragment_See extends Fragment {
     View view;
     ArrayList<String> data;
-<<<<<<< HEAD
     TextView shared;
     JSONParser jsonParser;
     JSONObject jsonObject;
     JSONArray jsonPop;
     TextView title;
 
-=======
     Button button1;
->>>>>>> 14905600bf21149113961a305a101d7bbb905a8e
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -53,14 +46,11 @@ public class Fragment_See extends Fragment {
             e.printStackTrace();
         }
 
-<<<<<<< HEAD
         System.out.println("this is fragment_See");
 
         String jsonStr = get_route.string;
         System.out.println(jsonStr);
-=======
 
->>>>>>> 14905600bf21149113961a305a101d7bbb905a8e
         System.out.println("sadfsdaf"+data);
 
         try {
@@ -78,7 +68,7 @@ public class Fragment_See extends Fragment {
 
 
         shared = (TextView)view.findViewById(R.id.SharedOrNot);
-//        if(data.get(0) == "true") shared.setText("이 글은 choi 님에 의해 작성되었습니다.");
+//        if(data.get(0) == "true") shared.setText("이 글은 choi 님에 의해 작성되었습니다."); ????? 나아닌데
         return view;
     }
 

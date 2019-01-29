@@ -1,18 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
     <Button
-        android:id="@+id/button"
-        android:drawbleLeft="@android:dr"
+        android:id="@+id/button1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#212121"
-        android:text="원범이와 함께하는 힐링여행                                                                                          #힐링#카페#오름"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="89dp" />
+        android:layout_alignParentBottom="true"
+        android:background="#C0C0C0"
+        android:drawableLeft="@android:drawable/ic_menu_save"
+        android:drawableRight="@android:drawable/ic_menu_share"
+        android:paddingLeft="15dp"
+        android:drawablePadding="20dp"
+        android:textAlignment="textStart"
+        android:text="원범이와 함께하는 힐링여행                                                                    #힐링#카페#오름"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#C0C0C0"
+        android:drawableLeft="@android:drawable/ic_menu_save"
+
+        android:drawablePadding="20dp"
+        android:paddingLeft="15dp"
+        android:text="오름 정복 가즈아~~                                                                           #힐링#오름"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="71dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#C0C0C0"
+        android:drawableRight="@android:drawable/ic_menu_share"
+        android:paddingLeft="67dp"
+        android:text="연예인 강재희의 카페투어                                                                    #먹방#카페"
+        android:textAlignment="textStart"
+        android:textColor="#000000"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="127dp" />
+
 </android.support.constraint.ConstraintLayout>

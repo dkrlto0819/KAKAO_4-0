@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
@@ -15,7 +16,7 @@ import java.util.concurrent.ExecutionException;
 public class Fragment_See extends Fragment {
     View view;
     ArrayList<String> data;
-
+    Button button1;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class Fragment_See extends Fragment {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
 
         System.out.println("sadfsdaf"+data);
         view = inflater.inflate(R.layout.fragment_see, container, false);

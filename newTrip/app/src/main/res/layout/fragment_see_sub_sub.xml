@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DayText"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_width="102dp"
+        android:layout_height="112dp"
+        android:scaleType="fitStart"
+        android:visibility="visible"
+        tools:srcCompat="@android:drawable/ic_input_add" />
+
+    <TextView
+        android:id="@+id/DestinationTitle"
+        app:layout_constraintBottom_toTopOf="@+id/MemoContent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/MemoContent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="273dp"
+        android:layout_height="38dp"
+        android:text="TextView"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="102dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/MemoContent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/DestinationTitle"
+        android:layout_width="271dp"
+        android:layout_height="68dp"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+</android.support.constraint.ConstraintLayout>

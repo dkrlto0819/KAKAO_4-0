@@ -1,4 +1,7 @@
 package com.example.ddang.newtrip;
 
-public class Fragment_See {
+import android.support.v4.app.Fragment;
+
+public class Fragment_See extends Fragment {
+
 }

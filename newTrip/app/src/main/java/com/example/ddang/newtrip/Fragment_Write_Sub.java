@@ -3,6 +3,7 @@ package com.example.ddang.newtrip;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,6 +31,7 @@ public class Fragment_Write_Sub extends LinearLayout {
 
     private void init(final Context context){
         LayoutInflater inflater =(LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        inflater.inflate(R.layout.fragment_write_sub,this,true);
+        inflater.inflate(R.layout.fragment_write_sub, this, true);
     }
+
 }

@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Fragment_Home fragment_home;
     Fragment_Write fragment_write;
     Fragment_List fragment_list;
+    Fragment_See fragment_see;
 
 
     @Override
@@ -82,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
                 break;
             case 1:
-                fragment_write=new Fragment_Write();
-                fragmentTransaction.replace(R.id.main_frame, fragment_write);
+                fragment_see=new Fragment_See();
+                fragmentTransaction.replace(R.id.main_frame, fragment_see);
                 fragmentTransaction.commit();
                 break;
             case 2:

@@ -19,7 +19,6 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
 
     public JSONArray json_title;
     public String string;
-
     @Override
     protected ArrayList<String> doInBackground(Void... voids) {
         ArrayList<String> message = null;

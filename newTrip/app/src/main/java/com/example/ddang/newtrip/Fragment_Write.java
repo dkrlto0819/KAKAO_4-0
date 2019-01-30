@@ -16,6 +16,9 @@ import android.widget.TextView;
 
 import org.w3c.dom.Text;
 
+import java.util.ArrayList;
+import java.util.concurrent.ExecutionException;
+
 
 public class Fragment_Write extends Fragment {
 
@@ -36,6 +39,19 @@ public class Fragment_Write extends Fragment {
         con = (LinearLayout)view.findViewById(R.id.PlusDay);
         dayText = (TextView)view.findViewById(R.id.DayText);
         //destinationPicture = (ImageView)getView().findViewById(R.id.imageView2);
+
+        ArrayList<String> data;
+        Get_Route get_route = new Get_Route();
+        data = new ArrayList<>();
+        try {
+            data = get_route.execute().get();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("sadfsdaf"+data);
+
 
         plusButton.setOnClickListener(new Button.OnClickListener() {
             @Override

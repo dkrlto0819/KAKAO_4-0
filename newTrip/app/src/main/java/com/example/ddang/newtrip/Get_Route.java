@@ -62,6 +62,7 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
             }
 
 
+            System.out.println("planiD : 1");
             System.out.println(stringBuffer);
             string = stringBuffer.toString();
             inputStream.close();
@@ -69,11 +70,14 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(string);
             jsonPop = (JSONArray) jsonObject.get("routes");
+<<<<<<< Updated upstream
 
 //            for(int i=0; i<jsonPop.size(); i++){
 //                JSONObject objectInArray = (JSONObject) jsonPop.get(i);
 ////                json_title=(JSONArray) objectInArray.get("title");
 //            }
+=======
+>>>>>>> Stashed changes
 
             //json_title = (JSONArray) jsonObject.get("title");
 
@@ -89,9 +93,15 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
         ArrayList<String> route = new ArrayList<>();
 
         JSONArray jsonArray = call_popular();
+
         for(Object item : jsonArray) {
+<<<<<<< Updated upstream
             route.add(((JSONObject) item).toString());
+=======
+            route.add(((JSONObject) item).get("place").toString());
+>>>>>>> Stashed changes
         }
+        System.out.println("-=========");
         System.out.println(jsonArray.toString());
         return route;
     }

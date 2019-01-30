@@ -19,7 +19,6 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
 
     public JSONArray json_title;
     public String string;
-
     @Override
     protected ArrayList<String> doInBackground(Void... voids) {
         ArrayList<String> message = null;
@@ -70,10 +69,13 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
             JSONParser jsonParser = new JSONParser();
             JSONObject jsonObject = (JSONObject) jsonParser.parse(string);
             jsonPop = (JSONArray) jsonObject.get("routes");
+<<<<<<< HEAD
 //            for(int i=0; i<jsonPop.size(); i++){
 //                JSONObject objectInArray = (JSONObject) jsonPop.get(i);
 ////                json_title=(JSONArray) objectInArray.get("title");
 //            }
+=======
+>>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
 
             //json_title = (JSONArray) jsonObject.get("title");
 
@@ -92,7 +94,10 @@ public class Get_Route extends AsyncTask<Void, Void, ArrayList> {
 
         for(Object item : jsonArray) {
             route.add(((JSONObject) item).toString());
+<<<<<<< HEAD
 
+=======
+>>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
         }
         System.out.println("-=========");
         System.out.println(jsonArray.toString());

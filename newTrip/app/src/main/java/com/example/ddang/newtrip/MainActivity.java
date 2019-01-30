@@ -20,17 +20,52 @@ public class MainActivity extends AppCompatActivity {
     Fragment_Home fragment_home;
     Fragment_List fragment_list;
     Fragment_See fragment_see;
+<<<<<<< HEAD
     Toolbar toolbar;
+=======
+>>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setFrag(0);
         setContentView(R.layout.activity_main);
+        fragmentTransaction.replace(R.id.main_frame, fragment_home);
 
+<<<<<<< HEAD
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
+=======
+        return;
+//        final Fragment_List fragment_list = new Fragment_List();
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.add(R.id.container, fragment_list);
+
+    }
+
+//    private void replaceFragment(Fragment fragment) {
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+//        fragmentTransaction.replace(R.id.container, fragment).commit();
+//
+//
+//        Toolbar toolbar = findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                        .setAction("Action", null).show();
+//
+//            }
+//        });
+//    }
+>>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
 
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -60,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+<<<<<<< HEAD
     public void setFrag(int n) {    //프래그먼트를 교체하는 작업을 하는 메소드를 만들었습니다
         fragmentManager = getSupportFragmentManager();
         fragmentTransaction = fragmentManager.beginTransaction();
@@ -87,4 +123,15 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
+=======
+                        fragmentTransaction.commit();
+                        break;
+                    case 3:
+                        fragment_home = new Fragment_Home();
+                        fragmentTransaction.replace(R.id.main_frame, fragment_home);
+                        fragmentTransaction.commit();
+                        break;
+                }
+            }
+>>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
 }

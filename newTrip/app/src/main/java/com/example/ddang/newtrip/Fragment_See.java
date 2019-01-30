@@ -15,6 +15,14 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
+<<<<<<< HEAD
+=======
+import org.json.simple.parser.ParseException;
+import org.w3c.dom.Text;
+import android.widget.Button;
+
+
+>>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
@@ -26,6 +34,8 @@ public class Fragment_See extends Fragment {
     JSONObject jsonObject;
     JSONArray jsonPop;
     TextView title;
+    TextView category;
+    TextView period;
 
     @Nullable
     @Override
@@ -50,18 +60,36 @@ public class Fragment_See extends Fragment {
         System.out.println("sadfsdaf"+data);
 
         try {
+            title = (TextView)view.findViewById(R.id.Title);
+            shared = (TextView) view.findViewById(R.id.SharedOrNot);
+            category = (TextView) view.findViewById(R.id.Category);
+            period = (TextView) view.findViewById(R.id.Period);
+
             JSONObject jsonObj = new JSONObject(jsonStr);
             String jsonPop1 = jsonObj.get("title").toString();
-            System.out.println("TITLE:"+jsonPop1);
+            JSONArray categoryArray = (JSONArray) jsonObj.get("categories");
+            for(int i = 0 ; i<categoryArray.length(); i++){
+                JSONObject categoryObj = categoryArray.getJSONObject(i);
+                String title = categoryObj.getString("title");
+                category.setText("#"+title);
+            }
 
-            title = (TextView)view.findViewById(R.id.Title);
+//            JSONObject categoryObj = new JSONObject(categoryStr);
+
+
+
+//            String categoryTitle = categoryObj.get("title").toString();
+
+            //category.setText(categoryTitle);
+
+            if(jsonObj.get("shared").toString() == "true")
+                shared.setText("이 글은 choi에 의해 작성되었습니다.");
             title.setText(jsonPop1);
+            period.setText("기간 : "+jsonObj.get("period")+"일");
         } catch (JSONException e) {
             jsonPop = new JSONArray();
             e.printStackTrace();
         }
-
-
 
         shared = (TextView)view.findViewById(R.id.SharedOrNot);
 //        if(data.get(0) == "true") shared.setText("이 글은 choi 님에 의해 작성되었습니다."); ????? 나아닌데

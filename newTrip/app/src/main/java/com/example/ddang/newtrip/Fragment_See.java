@@ -9,49 +9,24 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2921993a5f8cfe29e7c1133dbbfaa9760bdd5ecb
 import android.widget.TextView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
-import org.w3c.dom.Text;
-<<<<<<< HEAD
-import android.widget.Button;
-=======
-
-import android.widget.Button;
-
-
->>>>>>> 2921993a5f8cfe29e7c1133dbbfaa9760bdd5ecb
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
 public class Fragment_See extends Fragment {
     View view;
     ArrayList<String> data;
-<<<<<<< HEAD
-=======
-
->>>>>>> 2921993a5f8cfe29e7c1133dbbfaa9760bdd5ecb
     TextView shared;
     JSONParser jsonParser;
     JSONObject jsonObject;
     JSONArray jsonPop;
     TextView title;
 
-<<<<<<< HEAD
-    Button button1;
-=======
-
-    Button button1;
-
->>>>>>> 2921993a5f8cfe29e7c1133dbbfaa9760bdd5ecb
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -67,10 +42,6 @@ public class Fragment_See extends Fragment {
             e.printStackTrace();
         }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 2921993a5f8cfe29e7c1133dbbfaa9760bdd5ecb
         System.out.println("this is fragment_See");
 
         String jsonStr = get_route.string;

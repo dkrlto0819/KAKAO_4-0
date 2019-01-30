@@ -15,14 +15,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
-<<<<<<< HEAD
-=======
-import org.json.simple.parser.ParseException;
-import org.w3c.dom.Text;
-import android.widget.Button;
-
-
->>>>>>> f6c9f2494a8174290ce486a8bc777d9e01576ce5
 import java.util.ArrayList;
 import java.util.concurrent.ExecutionException;
 
